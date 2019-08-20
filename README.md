@@ -1,6 +1,6 @@
 # DarkFox
 
-Remote access trojan created using WinRar with firefox installer and python Reverse Shell embedded.
+Remote access trojan created using WinRar with an installer (ex. firefox) and python Reverse Shell embedded.
 
 - Edit the client.py file by setting IP and port of the attacking Server listening and IP and port of any proxy present in the attack machine.If there is not a proxy comment the relative section.
 
