@@ -12,6 +12,6 @@ Always in the settings of the self-extracting module select request access with 
 The file antivirus.exe is a windowsless .exe that disable the antivirus. It will be launched by client.exe before connecting to the server.
 
 - The antivirus.bat file contains the code of the homonymous .exe file and anotother optional feature.
-I used "Slimm bat to exe.exe" to create to convert the .bat file into a windowsless .exe file
+I used "Slimm bat to exe.exe" to convert the .bat file into a windowsless .exe file
 
 Enjoy :)
